@@ -46,6 +46,7 @@ function Classes() {
 
   return (
     <div className="main">
+      <div className="section-header">My Courses</div>
       <div className="search-box">
         <input
           type="text"

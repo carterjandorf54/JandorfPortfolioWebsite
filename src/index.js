@@ -4,10 +4,14 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Classes from "./components/classes";
+import LoadPictures from "./components/loadpictures";
+import CarterJandorf from "./components/carterjandorf";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <CarterJandorf />
+    <LoadPictures />
     <Classes />
   </React.StrictMode>
 );
