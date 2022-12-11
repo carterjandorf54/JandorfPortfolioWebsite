@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
+
+*,
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main {
+  background-color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.heading {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.class-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  padding: 0;
+  background: linear-gradient(to right, aqua, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.class-container > * {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  font-size: 16px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.search {
+  width: 50%;
+  height: 2.7rem;
+  border: 0.1rem solid black;
+  border-radius: 0.3rem;
+  outline: none;
+  padding-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.search:hover {
+  cursor: pointer;
+}
+
+.search-button:hover {
+  cursor: pointer;
+}
+
+.search-button2:hover {
+  cursor: pointer;
+}
+
+.search-button {
+  margin-left: 0.5rem;
+  height: 3rem;
+  border: 0.1rem solid black;
+  border-radius: 0.3rem;
+  color: black;
+  font-size: 1.5rem;
+  background: linear-gradient(to right, aqua, white);
+  outline: none;
+}
+
+.search-button2 {
+  margin-left: 0.5rem;
+  height: 3rem;
+  border: 0.1rem solid black;
+  border-radius: 0.3rem;
+  font-size: 1.5rem;
+  color: black;
+  background-color: red;
+  outline: none;
+}
+
+.header {
+  display: flex;
+  justify-content: left;
+  align-items: left;
 }
