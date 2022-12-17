@@ -13,6 +13,7 @@ root.render(
     <CarterJandorf />
     <LoadPictures />
     <Classes />
+    <div className="footer"></div>
   </React.StrictMode>
 );
 

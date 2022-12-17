@@ -2,13 +2,19 @@
 
 *,
 body {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.2rem;
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: sans-serif;
+  /* font-size: 1.1rem; */
+  background-color: black;
+  color: white;
+}
+
+.section-header {
   background-color: black;
 }
 
 .main {
-  background-color: black;
+  background: black;
 }
 
 .heading {
@@ -22,21 +28,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
   padding: 0;
   color: white;
-  /* background: linear-gradient(to right, aqua, white);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
   font-size: 16px;
-  padding-bottom: 4rem;
+  padding-bottom: 0rem;
+  width: 100vw;
 }
 
 .class-container > * {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
   text-decoration: none;
   list-style: none;
-  margin: 0;
-  font-size: 16px;
+  font-size: 1.1rem;
 }
 
 .search-box {
@@ -48,13 +53,14 @@ body {
 
 .search {
   width: 50%;
-  height: 2.7rem;
+  height: 2.2rem;
   border: 0.1rem solid white;
-  border-radius: 0.3rem;
+  border-radius: 5px;
   outline: none;
   padding-right: 1rem;
   font-size: 1.5rem;
   color: white;
+  background-color: black;
 }
 
 .search:hover {
@@ -63,32 +69,40 @@ body {
 
 .search-button:hover {
   cursor: pointer;
+  color: black;
+  border: 0.1rem solid black;
+  transition: 0.5s ease;
+  background: linear-gradient(to right, purple, yellow);
+  opacity: 1;
 }
 
 .search-button2:hover {
   cursor: pointer;
+  color: black;
+  transition: 0.5s ease;
+  border: 0.1rem solid black;
+  background: linear-gradient(to right, red, orange);
+  opacity: 1;
 }
 
 .search-button {
   margin-left: 0.5rem;
-  height: 3rem;
-  border: 0.1rem solid black;
+  height: 2.5rem;
+  border: 0.1rem solid white;
   border-radius: 0.3rem;
-  color: black;
+  color: white;
   font-size: 1.5rem;
-  background: linear-gradient(to right, aqua, white);
-  outline: none;
+  background-color: black;
 }
 
 .search-button2 {
   margin-left: 0.5rem;
-  height: 3rem;
-  border: 0.1rem solid black;
+  height: 2.5rem;
+  border: 0.1rem solid white;
   border-radius: 0.3rem;
   font-size: 1.5rem;
-  color: black;
-  background-color: red;
-  outline: none;
+  color: white;
+  background-color: black;
 }
 
 .header {
@@ -149,4 +163,18 @@ body {
   padding: 0.5rem;
   font-size: 3rem;
   font-weight: bold;
+}
+
+.gpa {
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+
+.footer {
+  padding-bottom: 4rem;
 }

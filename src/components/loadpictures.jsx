@@ -27,13 +27,16 @@ const LoadPictures = () => {
       <div className="section-header">Pictures</div>
       <div className="Filter">
         <h1 className="filter-text">Filter By:</h1>
-        <button className="pic-button" onClick={() => handleFilter("me")}>
+        <button className="search-button" onClick={() => handleFilter("me")}>
           Me
         </button>
-        <button className="pic-button" onClick={() => handleFilter("computer")}>
+        <button
+          className="search-button"
+          onClick={() => handleFilter("computer")}
+        >
           Computer
         </button>
-        <button className="pic-button" onClick={() => handleFilter("track")}>
+        <button className="search-button" onClick={() => handleFilter("track")}>
           Track
         </button>
       </div>

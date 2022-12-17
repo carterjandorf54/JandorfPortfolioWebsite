@@ -1,23 +1,28 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import { newArr } from "./classarray";
 
 function Classes() {
   let [classes, setClasses] = useState([...newArr]);
 
-  function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
+  function calculateGPA() {
+    let total = 0;
+    let count = 0;
+    for (let i of classes) {
+      if (i.grade == "A") {
+        total += 4;
+      } else if (i.grade == "B+") {
+        total += 3.3;
+      } else if (i.grade == "B") {
+        total += 3;
+      } else {
+        total += 0;
+      }
+      count++;
+    }
 
-  const filterByYear = (test) => {
-    const sem1 = "Fall " + test;
-    const sem2 = "Spring " + test;
-    const sem3 = "Summer" + test;
-    const result = classes.filter(
-      (v) => v.year === sem1 || v.year === sem2 || v.year === sem3
-    );
-    setClasses([...result]);
-  };
+    return Math.round((total / count) * 100) / 100;
+  }
 
   const getFilterData = () => {
     const text = document.getElementById("filter1").value;
@@ -41,6 +46,7 @@ function Classes() {
   };
 
   const clearFilters = () => {
+    document.getElementById("filter1").value = "";
     setClasses([...newArr]);
   };
 
@@ -54,7 +60,11 @@ function Classes() {
           className="search"
           placeholder="Filter By..."
         />
-        <button className="search-button" onClick={() => getFilterData()}>
+        <button
+          id="search-button1"
+          className="search-button"
+          onClick={() => getFilterData()}
+        >
           Filter
         </button>
         <button className="search-button2" onClick={() => clearFilters()}>
@@ -98,6 +108,9 @@ function Classes() {
             <li key={item.lvl}>{item.category}</li>
           ))}
         </ul>
+      </div>
+      <div className="gpa">
+        <h3>GPA for Current Selection: {calculateGPA()}</h3>
       </div>
     </div>
   );
